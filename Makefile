@@ -1,6 +1,6 @@
 BINARY := wayshot
 BUILDFLAGS := --release
-TARGET_DIR := /usr/bin
+TARGET_DIR := $(DESTDIR)/usr/bin
 SOURCE_DIR := ./target/release
 MAN1_DIR := /usr/share/man/man1
 MAN7_DIR := /usr/share/man/man7
