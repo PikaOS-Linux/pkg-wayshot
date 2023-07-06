@@ -10,7 +10,6 @@ cp -rvf ../debian ./
 # Get build deps
 apt-get build-dep ./ -y
 
-make setup
 # Build package
 dpkg-buildpackage --no-sign
 
