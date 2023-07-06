@@ -7,10 +7,6 @@ Build-Depends: debhelper-compat (= 13),
                scdoc,
                build-essential,
                cargo,
-               ninja-build,
-               meson,
-               cmake,
-               cmake-extras,
 Rules-Requires-Root: no
 
 Package: wayshot
