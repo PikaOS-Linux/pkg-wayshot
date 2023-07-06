@@ -24,17 +24,4 @@ uninstall:
 	@rm -f $(TARGET_DIR)/$(BINARY)
 	@rm -f /usr/share/man/**/wayshot.*
 
-check:
-	@cargo fmt
-	@cargo check
-	@cargo clippy
-
-clean:
-	@cargo clean
-	@rm -f ./docs/*.1.gz
-
-setup:
-	@rustup install stable
-	@rustup default stable
-
-.PHONY: check clean setup all install build
+.PHONY: all install build
