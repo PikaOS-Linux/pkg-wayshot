@@ -3,13 +3,14 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Clone Upstream
-mkdir -p ./src-pkg-name
-cp -rvf ./debian ./src-pkg-name/
-cd ./src-pkg-name/
+git clone https://github.com/waycrate/wayshot.git --recurse-submodules
+cd wayshot
+cp -rvf ../debian ./
 
 # Get build deps
 apt-get build-dep ./ -y
 
+make setup
 # Build package
 dpkg-buildpackage --no-sign
 
